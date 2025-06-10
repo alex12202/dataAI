@@ -1,0 +1,402 @@
+{
+  "train": {
+    "procedure_name": "dbo.train",
+    "keywords": [
+      "get quotes for material",
+      "load training data",
+      "material quotes",
+      "material-specific quotes",
+      "prepare training",
+      "quotes filter by material",
+      "quotes for material",
+      "select quotes by material",
+      "show train data",
+      "start training",
+      "train",
+      "train select quotes",
+      "train_procedure"
+    ],
+    "parameters": {
+      "MaterialName": {
+        "type": "VARCHAR(100)",
+        "prompt": "Which material would you like to see quotes for?"
+      }
+    },
+    "call_template": "EXEC dbo.train @MaterialName = '{MaterialName}';",
+    "description": "Fetches quotes related to a specific material to support training or analysis."
+  },
+  "material_popularity": {
+    "procedure_name": "dbo.material_popularity",
+    "keywords": [
+      "best-selling materials",
+      "frequent materials",
+      "get_most_popular_material",
+      "material trends",
+      "material usage ranking",
+      "most popular materials",
+      "most quoted materials",
+      "most used materials",
+      "popular materials",
+      "popular quotes",
+      "top materials",
+      "trending materials"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.material_popularity;",
+    "description": "Shows the most commonly used or quoted materials."
+  },
+  "average_quote_by_material": {
+    "procedure_name": "dbo.average_quote_by_material",
+    "keywords": [
+      "average amount by material",
+      "average material quote value",
+      "average price per material",
+      "average quote",
+      "avg_quote_material",
+      "material quote average",
+      "material quote mean",
+      "material-wise average quote",
+      "mean material quote",
+      "quote amount by material"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.average_quote_by_material;",
+    "description": "Calculates the average quote value grouped by each material."
+  },
+  "impact_stone_visualizer": {
+    "procedure_name": "dbo.impact_stone_visualizer",
+    "keywords": [
+      "does visualizer help",
+      "impact of visualizer",
+      "stone visualizer",
+      "stone visualizer insights",
+      "stone visualizer stats",
+      "stone visualizer usage",
+      "visualizer effect",
+      "visualizer impact",
+      "visualizer influence",
+      "visualizer performance"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.impact_stone_visualizer;",
+    "description": "Analyzes the effectiveness of the stone visualizer tool on conversions."
+  },
+  "discount_effectiveness": {
+    "procedure_name": "dbo.discount_effectiveness",
+    "keywords": [
+      "discount conversion",
+      "discount effectiveness",
+      "discount impact",
+      "discount offers",
+      "discount outcomes",
+      "do discounts work",
+      "impact of discounts",
+      "offers and quotes",
+      "promotion results",
+      "sales promotions"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.discount_effectiveness;",
+    "description": "Evaluates how discounts impact conversion rates or customer engagement."
+  },
+  "quotes_to_projects": {
+    "procedure_name": "dbo.quotes_to_projects",
+    "keywords": [
+      "conversion analysis",
+      "conversion efficiency",
+      "conversion rate",
+      "conversion stats",
+      "count quote to project conversions",
+      "get_conversion_stats",
+      "get_quote_to_project_conversion_count",
+      "how many quotes became projects",
+      "how many quotes converted",
+      "number of converted quotes",
+      "number of project conversions",
+      "project conversion statistics",
+      "projects conversion",
+      "quote conversion rate",
+      "quote conversion statistics",
+      "quote to project conversion summary",
+      "quote to project ratio",
+      "quotes converted",
+      "quotes converted to projects"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.quotes_to_projects;",
+    "description": "Determines how many quotes were successfully converted into projects."
+  },
+  "quote_trend_over_time": {
+    "procedure_name": "dbo.quote_trend_over_time",
+    "keywords": [
+      "quote trend",
+      "quote over time",
+      "seasonality of quotes"
+    ],
+    "parameters": {
+      "Year": {
+        "type": "INT",
+        "prompt": "Enter the year you want quote trends for."
+      },
+      "Month": {
+        "type": "INT",
+        "prompt": "Enter the month you want quote trends for."
+      }
+    },
+    "call_template": "EXEC dbo.quote_trend_over_time;",
+    "description": "Displays trends in quotes over specific time periods, useful for seasonality analysis."
+  },
+  "quotes_with_clients": {
+    "procedure_name": "dbo.quotes_with_clients",
+    "keywords": [
+      "quotes by client",
+      "quotes and materials",
+      "client name and quotes"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.quotes_with_clients;",
+    "description": "Lists all quotes made by clients, including materials involved."
+  },
+  "average_quote_per_client": {
+    "procedure_name": "dbo.average_quote_per_client",
+    "keywords": [
+      "average quote per client",
+      "client quote value"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.average_quote_per_client;",
+    "description": "Computes the average value of quotes made per client."
+  },
+  "quotes_by_address": {
+    "procedure_name": "dbo.quotes_by_address",
+    "keywords": [
+      "quotes by city",
+      "quotes by address"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.quotes_by_address;",
+    "description": "Breaks down quotes by city or address to identify geographic trends."
+  },
+  "quotes_by_date_and_client": {
+    "procedure_name": "dbo.quotes_by_date_and_client",
+    "keywords": [
+      "quotes by date",
+      "quotes by client",
+      "quote timeline"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.quotes_by_date_and_client;",
+    "description": "Shows quotes over time, segmented by clients."
+  },
+  "total_number_of_quotes": {
+    "procedure_name": "dbo.total_number_of_quotes",
+    "keywords": [
+      "total quotes",
+      "number of quotes",
+      "count quotes",
+      "quote count"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.total_number_of_quotes;",
+    "description": "Returns the total count of quotes issued in the system."
+  },
+  "total_quote_and_project_amount": {
+    "procedure_name": "dbo.total_quote_and_project_amount",
+    "keywords": [
+      "total quote amount",
+      "total project amount",
+      "sum of quotes",
+      "sum of projects"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.total_quote_and_project_amount;",
+    "description": "Summarizes total value from both quotes and converted projects."
+  },
+  "number_of_converted_quotes": {
+    "procedure_name": "dbo.number_of_converted_quotes",
+    "keywords": [
+      "converted quotes",
+      "number of converted quotes",
+      "count converted quotes",
+      "quotes to projects"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.number_of_converted_quotes;",
+    "description": "Counts the number of quotes that were turned into actual projects."
+  },
+  "monthly_quote_vs_project": {
+    "procedure_name": "dbo.monthly_quote_vs_project",
+    "keywords": [
+      "monthly comparison",
+      "quotes vs projects",
+      "quote and project per month",
+      "monthly analysis"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.monthly_quote_vs_project;",
+    "description": "Compares quotes and projects on a monthly basis."
+  },
+  "average_conversion_time": {
+    "procedure_name": "dbo.average_conversion_time",
+    "keywords": [
+      "average conversion time",
+      "conversion days",
+      "average days to convert"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.average_conversion_time;",
+    "description": "Calculates the average time it takes to convert a quote into a project."
+  },
+  "converted_quotes_per_material": {
+  "procedure_name": "dbo.converted_quotes_per_material",
+  "keywords": [
+    "converted quotes by material",
+    "quotes converted per material",
+    "material conversion count",
+    "material quotes converted",
+    "how many quotes converted for material",
+    "converted quotes for material",
+    "number of conversions by material",
+    "project conversions for material",
+    "material-wise conversion stats",
+    "material conversion summary"
+  ],
+  "parameters": {
+    "MaterialName": {
+      "type": "VARCHAR(100)",
+      "prompt": "Enter a material name to find how many were converted."
+    }
+  },
+  "call_template": "EXEC dbo.converted_quotes_per_material @MaterialName = '{MaterialName}';",
+  "description": "Shows the number of quotes for a material (e.g., granite) that were converted."
+}, 
+
+  "top_fastest_granite_conversions": {
+    "procedure_name": "dbo.top_fastest_granite_conversions",
+    "keywords": [
+      "fast granite conversions",
+      "quickest granite quotes",
+      "top granite deals"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.top_fastest_granite_conversions;",
+    "description": "Identifies the quickest conversions for granite-related quotes."
+  },
+  "factors_fastest_granite": {
+    "procedure_name": "dbo.factors_fastest_granite",
+    "keywords": [
+      "granite conversion factors",
+      "visualizer and discount for granite",
+      "fast granite deal factors"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.factors_fastest_granite;",
+    "description": "Analyzes the contributing factors for fast granite quote conversions."
+  },
+  "overall_conversion_factors": {
+    "procedure_name": "dbo.overall_conversion_factors",
+    "keywords": [
+      "conversion factors",
+      "overall visualizer discount impact",
+      "conversion analysis"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.overall_conversion_factors;",
+    "description": "Examines overall visualizer and discount effects on conversion rates."
+  },
+  "most_expensive_unconverted": {
+    "procedure_name": "dbo.most_expensive_unconverted",
+    "keywords": [
+      "expensive unconverted quote",
+      "top unconverted lead",
+      "most valuable not converted"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.most_expensive_unconverted;",
+    "description": "Finds the highest-value quotes that were not converted."
+  },
+  "age_most_expensive_unconverted": {
+    "procedure_name": "dbo.age_most_expensive_unconverted",
+    "keywords": [
+      "age of top quote",
+      "days since top unconverted",
+      "oldest expensive quote"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.age_most_expensive_unconverted;",
+    "description": "Shows the age (in days) of the most expensive unconverted quotes."
+  },
+  "clients_highest_total_quotes": {
+    "procedure_name": "dbo.clients_highest_total_quotes",
+    "keywords": [
+      "top clients by quote amount",
+      "high value clients",
+      "total client quotes"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.clients_highest_total_quotes;",
+    "description": "Ranks clients by the total value of their quotes."
+  },
+  "average_quote_over_time": {
+    "procedure_name": "dbo.average_quote_over_time",
+    "keywords": [
+      "average quote monthly",
+      "quote trend average",
+      "avg quote over time"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.average_quote_over_time;",
+    "description": "Displays how the average quote value changes over time."
+  },
+  "materials_highest_conversion": {
+    "procedure_name": "dbo.materials_highest_conversion",
+    "keywords": [
+      "best converting materials",
+      "materials with high conversion",
+      "material success rate"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.materials_highest_conversion;",
+    "description": "Highlights materials that lead to the highest conversion rates."
+  },
+  "unconverted_older_than_x_months": {
+    "procedure_name": "dbo.unconverted_older_than_x_months",
+    "keywords": [
+      "stale quotes",
+      "old unconverted quotes",
+      "x months old quotes"
+    ],
+    "parameters": {
+      "MonthsBack": {
+        "type": "INT",
+        "prompt": "How many months back should we check for unconverted quotes?"
+      }
+    },
+    "call_template": "EXEC dbo.unconverted_older_than_3_months;",
+    "description": "Lists quotes that are older than 3 months and still unconverted."
+  },
+  "visualizer_conversion_impact": {
+    "procedure_name": "dbo.visualizer_conversion_impact",
+    "keywords": [
+      "stone visualizer conversion",
+      "conversion visualizer",
+      "visualizer effect"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.visualizer_conversion_impact;",
+    "description": "Shows how using the visualizer impacts conversion outcomes."
+  },
+  "profitable_clients": {
+    "procedure_name": "dbo.top_10_profitable_clients",
+    "keywords": [
+      "top clients",
+      "most profitable clients",
+      "best clients",
+      "top 10 profitable clients",
+      "top 10 clients"
+    ],
+    "parameters": {},
+    "call_template": "EXEC dbo.top_10_profitable_clients;",
+    "description": "Lists the top 10 most profitable clients based on quote/project value."
+  }
+}
